@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Audit Report — matviet.vn (Mắt Việt)</title>
+<style>
+  :root{
+    --primary:#1e3a5f; --accent:#b8860b; --secondary:#4a5568;
+    --success:#2d6a4f; --warning:#d4740e; --danger:#c53030;
+    --light:#faf9f7; --grid:#d6d3cc; --muted:#6b7280; --dark:#1a1a2e;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:#22272e; line-height:1.55; margin:0; background:#eceae6;}
+  .page{max-width:920px; margin:24px auto; background:#fff; padding:48px 56px;
+    box-shadow:0 1px 6px rgba(0,0,0,.12); border-radius:6px;}
+  h1{font-size:30px; color:var(--primary); margin:0 0 4px;}
+  h2{font-size:21px; color:var(--primary); border-bottom:3px solid var(--accent);
+    padding-bottom:6px; margin:38px 0 16px;}
+  h3{font-size:16px; color:var(--dark); margin:26px 0 10px;}
+  h4{margin:0 0 4px; font-size:14.5px;}
+  p,li{font-size:14px;}
+  code,pre{font-family:"SF Mono",Consolas,"Courier New",monospace;}
+  code{background:#f3f1ec; padding:1px 5px; border-radius:3px; font-size:12.5px; color:#9a3412;}
+  pre{background:#1a1a2e; color:#e6e6ec; padding:16px 18px; border-radius:6px;
+    overflow:auto; font-size:12px; line-height:1.5;}
+  pre code{background:none; color:inherit; padding:0;}
+  .sub{color:var(--muted); font-size:13px; margin:0 0 18px;}
+  .meta-bar{display:flex; flex-wrap:wrap; gap:8px 18px; font-size:12.5px; color:var(--secondary);
+    border:1px solid var(--grid); background:var(--light); border-radius:6px; padding:12px 16px; margin:18px 0 8px;}
+  .meta-bar b{color:var(--primary);}
+  table{border-collapse:collapse; width:100%; margin:14px 0; font-size:13px;}
+  th,td{border:1px solid var(--grid); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--primary); color:#fff; font-weight:600;}
+  tbody tr:nth-child(even){background:#f8f7f4;}
+  .score-hero{display:flex; align-items:center; gap:28px; background:var(--light);
+    border:1px solid var(--grid); border-radius:8px; padding:22px 26px; margin:18px 0;}
+  .score-num{font-size:58px; font-weight:800; line-height:1; color:var(--warning);}
+  .score-num small{display:block; font-size:14px; font-weight:600; color:var(--muted); margin-top:6px;}
+  .badge{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.4px;
+    padding:2px 9px; border-radius:11px; color:#fff; text-transform:uppercase;}
+  .b-crit{background:var(--danger);} .b-high{background:var(--warning);}
+  .b-med{background:var(--accent);} .b-low{background:var(--success);}
+  .issue{border-left:4px solid var(--grid); padding:8px 0 8px 16px; margin:12px 0;}
+  .issue.crit{border-color:var(--danger);} .issue.high{border-color:var(--warning);}
+  .issue.med{border-color:var(--accent);} .issue.low{border-color:var(--success);}
+  .issue p{margin:4px 0 0; color:#374151;}
+  .callout{background:#fff8e6; border:1px solid #e9d8a6; border-radius:6px; padding:12px 16px; font-size:13px; margin:16px 0;}
+  ol.issues{padding-left:0; list-style:none; counter-reset:i;}
+  ol.issues > li{counter-increment:i; position:relative; padding-left:34px; margin:14px 0;}
+  ol.issues > li::before{content:counter(i); position:absolute; left:0; top:1px;
+    width:24px; height:24px; background:var(--primary); color:#fff; border-radius:50%;
+    font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center;}
+  .footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--grid);
+    font-size:11.5px; color:var(--muted);}
+  .legend span{margin-right:14px; font-size:12px;}
+  @media print{
+    body{background:#fff;} .page{box-shadow:none; margin:0; max-width:none; padding:24px 28px;}
+    h2{page-break-after:avoid;} .issue,pre,table{page-break-inside:avoid;}
+    .pb{page-break-before:always;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>SEO Audit Report</h1>
+  <p class="sub">matviet.vn — Mắt Việt (Vietnamese eyewear retailer)</p>
+
+  <div class="meta-bar">
+    <span><b>Date:</b> 2026-05-21</span>
+    <span><b>Platform:</b> Haravan</span>
+    <span><b>Business type:</b> Hybrid e-commerce + multi-location local (31+ stores)</span>
+    <span><b>Market:</b> Vietnam (vi)</span>
+  </div>
+
+  <div class="score-hero">
+    <div class="score-num">54<small>/ 100</small></div>
+    <div>
+      <h3 style="margin:0 0 6px;">SEO Health Score — Needs Work</h3>
+      <p style="margin:0; color:#374151;">Mắt Việt is a real-world authority — 37 years in business, 31+ stores,
+      an EssilorLuxottica partnership, 1,300+ blog articles — but the site fails to translate that authority into
+      machine-readable signals. The biggest wins are not "create more content"; they are
+      <b>structured data, index hygiene, and credentialed authorship</b> on content that already exists.</p>
+    </div>
+  </div>
+
+  <table>
+    <thead><tr><th>Category</th><th>Weight</th><th>Score</th><th>Weighted</th></tr></thead>
+    <tbody>
+      <tr><td>Technical SEO</td><td>22%</td><td>61</td><td>13.4</td></tr>
+      <tr><td>Content Quality (E-E-A-T)</td><td>23%</td><td>56</td><td>12.9</td></tr>
+      <tr><td>On-Page SEO</td><td>20%</td><td>58</td><td>11.6</td></tr>
+      <tr><td>Schema / Structured Data</td><td>10%</td><td>53</td><td>5.3</td></tr>
+      <tr><td>Performance (CWV)</td><td>10%</td><td>40</td><td>4.0</td></tr>
+      <tr><td>AI Search Readiness (GEO)</td><td>10%</td><td>34</td><td>3.4</td></tr>
+      <tr><td>Images</td><td>5%</td><td>60</td><td>3.0</td></tr>
+      <tr><td><b>Total</b></td><td></td><td></td><td><b>≈ 54</b></td></tr>
+    </tbody>
+  </table>
+
+  <p class="legend" style="margin-top:18px;">
+    <span><span class="badge b-crit">Critical</span> blocks indexing / penalties</span>
+    <span><span class="badge b-high">High</span> major ranking impact</span>
+    <span><span class="badge b-med">Medium</span> optimization</span>
+    <span><span class="badge b-low">Low</span> backlog</span>
+  </p>
+
+  <h2 class="pb"><span class="badge b-crit">Critical</span> &nbsp;Fix within 1 week</h2>
+  <ol class="issues">
+    <li><h4>Wrong product condition in schema</h4>
+      <p>Product Microdata contains <code>itemCondition: UsedCondition</code> while items are new. This can make
+      products show as <em>used/refurbished</em> in Google Shopping. Change to <code>https://schema.org/NewCondition</code>.</p></li>
+    <li><h4>Homepage HTML is ~483 KB</h4>
+      <p>Inline product JSON blobs (<code>all_product[id]={...}</code>) plus a full <b>inlined jQuery 3.6.0</b> bloat
+      every page and hurt LCP. Externalize jQuery to a cached file; move product JSON to an async fetch.</p></li>
+    <li><h4>No Product JSON-LD</h4>
+      <p>Only scattered Microdata exists. Add a self-contained <code>Product</code> + <code>Offer</code>
+      (price, priceCurrency VND, availability, url) + <code>brand</code> + <code>sku</code> block. Without it the site
+      is ineligible for product rich results.</p></li>
+    <li><h4>No author credentials on YMYL health content</h4>
+      <p>Eye-health articles (viễn thị, lão thị, cườm, contact-lens care) are bylined "Admin." Eye health is YMYL;
+      anonymous authorship fails Expertise outright across 400+ articles. Add named optometrist/technician authors
+      with credentials.</p></li>
+  </ol>
+
+  <h2><span class="badge b-high">High</span> &nbsp;Fix within 1 month</h2>
+  <ol class="issues">
+    <li><h4>Index bloat — duplicate collections</h4>
+      <p>~150 collections with heavy semantic overlap: <code>mat-meo</code> / <code>gong-mat-meo</code> /
+      <code>kinh-mat-mat-meo</code> (3 URLs for cat-eye), <code>bestseller</code> vs <code>bestsellers</code>,
+      six gender variants, four "nguyen-gia" variants. All self-canonical + <code>index,follow</code> → cannibalization.
+      Consolidate via canonicals/redirects.</p></li>
+    <li><h4>Expired campaign collections indexed</h4>
+      <p><code>flash-sale-blackfriday-2024</code>, <code>ctkm-ngay-cua-cha-*</code>, <code>deal-dong-gia-*</code>,
+      <code>san-pham-het-hang</code> are live, indexed, with the generic site-wide meta description. <code>noindex</code>
+      or 410/redirect them.</p></li>
+    <li><h4>Pagination signals contradict</h4>
+      <p><code>?page=2</code> correctly canonicals to page 1 but is still <code>index,follow</code>. Set paginated pages
+      to <code>noindex,follow</code>.</p></li>
+    <li><h4>Missing AggregateRating in schema</h4>
+      <p>Haravan review widgets load client-side, so ratings never reach structured data — no star ratings in SERPs.
+      Inject <code>aggregateRating</code> into Product JSON-LD.</p></li>
+    <li><h4>No BlogPosting / Article schema</h4>
+      <p>Blog posts emit only Organization schema; no <code>datePublished</code>, <code>dateModified</code>,
+      <code>author</code>. Blocks AI Overview citation and article rich results.</p></li>
+    <li><h4>No LocalBusiness / Optician schema for 31 stores</h4>
+      <p>Store-locator is JS-rendered with no schema and addresses aren't crawlable. Add <code>Optician</code> schema
+      (address, telephone, openingHours, geo) per location — a major local + AI-citation win.</p></li>
+    <li><h4>HSTS is only 7 days</h4>
+      <p><code>max-age=604800</code>. Raise to <code>max-age=31536000; includeSubDomains; preload</code>.</p></li>
+    <li><h4>Render-blocking JavaScript</h4>
+      <p><code>plugin-script.js</code>, <code>api.jquery.js</code>, <code>main.js</code> from cdn.hstatic.net load
+      synchronously. Add <code>defer</code>. Also add <code>&lt;link rel="preload" as="image"&gt;</code> for the LCP hero.</p></li>
+    <li><h4>IndexNow not enabled</h4>
+      <p>Haravan supports it natively; enable so Bing indexes new products in minutes.</p></li>
+    <li><h4>JS-only faceted navigation</h4>
+      <p>Filtered states (<code>?filter_gender=Nu</code>) aren't server-rendered, so high-intent queries
+      ("gọng kính nữ acetate") can't rank. Server-render key facets as crawlable collections.</p></li>
+    <li><h4>Off-topic content dilutes topical authority</h4>
+      <p>31 "Lifestyle" gift-guide articles (Christmas, Tết, teacher gifts) unrelated to eyewear; the 5 most recent
+      posts are all gift guides. Noindex or prune.</p></li>
+    <li><h4>Thin clinical service page</h4>
+      <p><code>/pages/dat-lich</code> (eye-exam booking) is &lt;200 words. For a YMYL service page, expand to 600–800
+      words: the 12-step protocol, equipment, who performs exams, FAQ.</p></li>
+  </ol>
+
+  <h2 class="pb"><span class="badge b-med">Medium</span> &nbsp;Fix within 3 months</h2>
+  <ol class="issues">
+    <li><h4>Add BreadcrumbList + WebSite/SearchAction</h4>
+      <p>Enables breadcrumb rich results and a sitelinks search box for branded "Mắt Việt" queries.</p></li>
+    <li><h4>Organization schema url mismatch</h4>
+      <p>Schema <code>url</code> uses <code>www.matviet.vn</code> but canonical host is non-www <code>matviet.vn</code>.
+      Align so the Knowledge Panel entity consolidates.</p></li>
+    <li><h4>Template merge failures</h4>
+      <p>Article bodies render "Bài viết này của&nbsp;&nbsp;sẽ…" with the brand variable blank, across many posts.
+      Fix the Liquid variable.</p></li>
+    <li><h4>Weak security headers</h4>
+      <p>Add <code>Referrer-Policy: strict-origin-when-cross-origin</code> and a real CSP
+      (<code>default-src</code>/<code>script-src</code>); current CSP has no source directives.</p></li>
+    <li><h4>ALL-CAPS product titles</h4>
+      <p><code>GỌNG KÍNH NỮ QINA QJ6115 B23</code> → sentence case for better CTR.</p></li>
+    <li><h4>Thin collection content</h4>
+      <p>Many shape/style collections are bare product grids. Add 300–500 words of buyer's-guide copy to permanent
+      collections. (<code>kinh-mat-nu</code> is a good model — its comparison tables are AI-citation friendly.)</p></li>
+    <li><h4>Remove dev/test pages from sitemap</h4>
+      <p><code>/blogs/dev-test</code>, <code>/pages/test*</code>, <code>/pages/test-redirect</code>.</p></li>
+    <li><h4>Add medical disclaimers + external citations</h4>
+      <p>Cite Bộ Y Tế / Bệnh viện Mắt TP.HCM on health articles and add a "consult a doctor" disclaimer.</p></li>
+  </ol>
+
+  <h2><span class="badge b-low">Low</span> &nbsp;Quick wins / backlog</h2>
+  <ol class="issues">
+    <li><h4>Create <code>llms.txt</code></h4>
+      <p>A 2-hour, high-ROI file describing the brand for AI agents; almost no Vietnamese e-commerce sites have it.</p></li>
+    <li><h4>Explicit AI-bot Allow rules</h4>
+      <p>Add <code>Allow</code> for GPTBot / ClaudeBot / PerplexityBot (currently only implicitly allowed; Nutch fully blocked).</p></li>
+    <li><h4>Template hygiene</h4>
+      <p>Fix malformed OG image (<code>http:https://…</code>); fix <code>© 2023</code> → dynamic year; remove obsolete
+      <code>noodp</code>, <code>meta keywords</code>, <code>revisit-after</code>.</p></li>
+    <li><h4>Enrich Organization sameAs</h4>
+      <p>Add YouTube, TikTok, Zalo, Instagram, Facebook — YouTube presence correlates strongly with AI citations.</p></li>
+    <li><h4>Wikipedia / Wikidata entity</h4>
+      <p>None exists; the brand clearly meets notability (1989, 31 stores, EssilorLuxottica). Highest-leverage
+      long-term GEO move.</p></li>
+  </ol>
+
+  <h2 class="pb">Ready-to-use snippets</h2>
+
+  <h3>Product JSON-LD <span style="font-weight:400;color:var(--muted);font-size:12px;">(fixes Critical #1, #3 and High #4 at once)</span></h3>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Gọng kính nữ Qina QJ6115 B23",
+  "image": "https://file.hstatic.net/.../qj6115.jpg",
+  "brand": { "@type": "Brand", "name": "Qina" },
+  "sku": "QJ6115-B23",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://matviet.vn/products/gong-kinh-nu-qina-qj6115-b23",
+    "priceCurrency": "VND",
+    "price": "1290000",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "37"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+  <h3>Organization JSON-LD <span style="font-weight:400;color:var(--muted);font-size:12px;">(sitewide; non-www url, full sameAs)</span></h3>
+<pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mắt Việt",
+  "legalName": "Công Ty TNHH Mắt Việt Group",
+  "foundingDate": "1989",
+  "url": "https://matviet.vn",
+  "logo": "https://matviet.vn/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/Matviet.vn",
+    "https://www.youtube.com/@matvietvn",
+    "https://www.instagram.com/matviet.vn",
+    "https://www.tiktok.com/@matvietofficial"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+84-1900-6081",
+    "contactType": "customer service"
+  }
+}
+&lt;/script&gt;</code></pre>
+
+  <h2 class="pb">30-Day Action Plan</h2>
+  <table>
+    <thead><tr><th style="width:90px;">Week</th><th>Focus</th></tr></thead>
+    <tbody>
+      <tr><td><b>Week 1</b></td><td>Fix <code>UsedCondition</code> → <code>NewCondition</code>; deploy Product + Organization
+        JSON-LD; externalize jQuery; <code>noindex</code>/redirect expired campaign collections.</td></tr>
+      <tr><td><b>Week 2</b></td><td>Add AggregateRating + BlogPosting + BreadcrumbList schema; raise HSTS;
+        <code>defer</code> the 3 hstatic scripts; preload LCP image; enable IndexNow.</td></tr>
+      <tr><td><b>Week 3</b></td><td>Consolidate duplicate collections (canonicals/redirects); add named credentialed
+        authors to top 20 health articles; publish <code>llms.txt</code>.</td></tr>
+      <tr><td><b>Week 4</b></td><td>Add Optician schema to store pages; expand <code>/pages/dat-lich</code>;
+        fix the blank brand-variable template bug; prune/noindex off-topic lifestyle posts.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <b>Coverage &amp; data sources.</b> This audit ran technical, content/E-E-A-T, schema, e-commerce, and GEO analysis
+    via live <code>curl</code> + page fetches of the homepage, product, collection, and blog pages plus robots.txt and the
+    XML sitemap index (10 child sitemaps). <b>Not included:</b> deep local geo-grid GBP rank tracking for the 31 stores
+    (<code>/seo local</code>) and lab Core Web Vitals measurement (<code>/seo performance</code> / PageSpeed) — the keyless
+    PageSpeed quota was exhausted at audit time and no Search Console / CrUX / GA4 credentials are configured. CWV findings
+    here are inferred from HTML payload and resource loading, not field/lab measurement.
+  </div>
+
+  <div class="footer">
+    Generated 2026-05-21 · matviet.vn (Mắt Việt) · SEO Health Score 54/100<br>
+    To save as PDF: open this file in your browser and press <b>Ctrl+P → Save as PDF</b> (enable "Background graphics").
+  </div>
+
+</div>
+</body>
+</html>
